@@ -41,7 +41,7 @@ export const Home = () => {
             <Post
               id={obj._id}
               title={obj.title}
-              imageUrl={obj.imageURL ? `http://localhost:5555${obj.imageURL}` : ''}
+              imageUrl={obj.imageURL ? `https://blogs-yho5.onrender.com${obj.imageURL}` : ''}
               user={obj.user}
               createdAt={obj.createdAt}
               viewsCount={obj.viewsCount}

@@ -2,7 +2,7 @@ import axios from "axios";
 
 
 const instance = axios.create({
-    baseURL: "http://localhost:5555"
+    baseURL: "https://blogs-yho5.onrender.com"
 });
 
 instance.interceptors.request.use((config) => {
