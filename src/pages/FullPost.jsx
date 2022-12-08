@@ -66,6 +66,7 @@ export const FullPost = () => {
         isLoading={false}
       >
         <Index />
+
       </CommentsBlock>
     </>
   );
