@@ -65,6 +65,12 @@ export const AddPost = () => {
       const _id = isEditing ? id : data.data._id
 
       navigate(`/posts/${_id}`)
+      if (isEditing) {
+        return alert('POST UPDATED')
+      } else {
+        return alert('POST created')
+
+      }
     } catch (error) {
       console.warn(error);
       alert('Error creating articles')
