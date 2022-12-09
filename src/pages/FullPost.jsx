@@ -11,7 +11,7 @@ export const FullPost = () => {
   const [data, setData] = React.useState();
   const [isLoading, setIsLoading] = React.useState(true);
   const { id } = useParams()
-  // const userData = useSelector(state => state.auth.data)
+  const userData = useSelector(state => state.auth.data)
 
 
 
@@ -44,7 +44,7 @@ export const FullPost = () => {
         viewsCount={data.viewsCount}
         commentsCount={1}
         tags={data.tags}
-        // isEditable={userData?.user?._id === data.user._id}
+        isEditable={userData?.user?._id === data.user._id}
         isFullPost
       >
         <ReactMarkdown children={data.text} />
