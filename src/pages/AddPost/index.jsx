@@ -117,7 +117,7 @@ export const AddPost = () => {
             Delete
           </Button>
 
-          <img className={styles.image} src={`https://blogs-yho5.onrender.com${imageURL}`} alt="Uploaded" />
+          <img className={styles.image} src={`https://blogsapp.onrender.com${imageURL}`} alt="Uploaded" />
         </>
       )}
 

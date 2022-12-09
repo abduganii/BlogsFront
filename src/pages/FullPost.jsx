@@ -5,11 +5,13 @@ import { Post } from "../components/Post";
 import { Index } from "../components/AddComment";
 import { CommentsBlock } from "../components/CommentsBlock";
 import axios from "../axios";
+import { useSelector } from "react-redux";
 
 export const FullPost = () => {
   const [data, setData] = React.useState();
   const [isLoading, setIsLoading] = React.useState(true);
   const { id } = useParams()
+  // const userData = useSelector(state => state.auth.data)
 
 
 
@@ -36,12 +38,13 @@ export const FullPost = () => {
       <Post
         id={data._id}
         title={data.title}
-        imageUrl={data.imageURL ? `https://blogs-yho5.onrender.com${data.imageURL}` : ''}
+        imageUrl={data.imageURL ? `https://blogsapp.onrender.com${data.imageURL}` : ''}
         user={data.user}
         createdAt={data.createdAt}
         viewsCount={data.viewsCount}
         commentsCount={1}
         tags={data.tags}
+        // isEditable={userData?.user?._id === data.user._id}
         isFullPost
       >
         <ReactMarkdown children={data.text} />
